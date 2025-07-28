@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home{
+   
+    color: aliceblue;
+}
+.home  h1{
+    color:#EDA02F;
+   text-align: center;
+   font-size: 5rem;
+}
+.home  p{
+    color: #0E465A;
+   text-align: center;
+   margin-top: 5%;
+   font-size: 3rem;
+   
+}
+
+.hero{
+    background-color: #0E465A;
+     
+}
+.hero img{
+ margin-left: 35%;
+   
+}
+.btn {
+    display: flex;
+    justify-content: space-between;  /* centers horizontally */
+    align-items: center;      /* centers vertically */
+   height: 20vh;     
+       /* optional: full screen height */
+}
+
+.btn button {
+    background-color: #CD3500;
+    font-size: 2rem;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+.element{
+    background-color: #F1E5D8;
+    border-radius: 2% ;
+    color: #0E465A;
+}
+
+.element h2{
+    text-align: center;
+    font-size: 6rem;
+}
+.btn button.expenses{
+background-color:#0E465A;
+}
