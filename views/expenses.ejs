@@ -30,7 +30,7 @@
          const rowBg = isOdd ? '#0E465A' : 'white';
          const textColor = isOdd ? 'white' : 'black';
     %>
-      <tr style='background-color: <%= rowBg %>; color: <%= textColor %>;'>
+      <tr style='background-color: <%=rowBg %>; color:<%= textColor %>;'>
         <td><%= index + 1 %></td>
         <td><%= e.title %></td>
         <td>₹<%= e.amount %></td>
@@ -41,7 +41,7 @@
   </tbody>
 </table>
 
-<!-- Styled card form for adding new expenses -->
+
 <div style="max-width: 500px; margin: 0 auto; padding: 20px; border-radius: 15px; background-color: #f0f8ff; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
   <h3 style="text-align: center; color: #0E465A;">Add Expense</h3>
   <form method="POST" action="/expenses/add" onsubmit="return validateForm()" style="display: flex; flex-direction: column; gap: 10px;">

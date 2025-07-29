@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ganesh Puja Events</title>
+ 
+
+</head>
+<body style="background-color: #0E465A; font-family: sans-serif; margin: 0; padding: 0;">
+
+  <div class="container" style="text-align: center;">
+    <h2 style="color: #EDA02F; font-size: 3.5rem; padding: 2rem;">🪔 Ganesh Puja Event Schedule</h2>
+
+    <% events.forEach((event, index) => { 
+         const isOdd = index % 2 !== 0;
+         const rowBg = isOdd ? '#0E465A' : 'white';
+         const textColor = isOdd ? 'white' : 'black';
+    %>
+      <div style="border: 1px solid #ccc; margin: 10px auto; padding: 20px; border-radius: 10px; background-color: <%= rowBg %>; color: <%= textColor %>; max-width: 600px;">
+        <h3><%= event.title %></h3>
+        <p>🕒 Time: <%= event.time %></p>
+        <p>📍 Venue: <%= event.venue %></p>
+      </div>
+    <% }) %>
+
+    <!-- Add Event Form -->
+    <div style="max-width: 500px; margin: 2rem auto; padding: 20px; border-radius: 15px; background-color: #f0f8ff; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h3 style="text-align: center; color: #0E465A;">➕ Add Event (Admin)</h3>
+      <form method="POST" action="/events/add" style="display: flex; flex-direction: column; gap: 10px;">
+        <input type="text" name="title" placeholder="Event Title" required style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;" />
+        <input type="text" name="time" placeholder="Time (e.g., 6:00 PM)" required style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;" />
+        <input type="text" name="venue" placeholder="Venue" required style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;" />
+        <input type="password" name="pin" placeholder="Admin PIN" required style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;" />
+        <button type="submit" style="padding: 10px; background-color: #0E465A; color: white; border: none; border-radius: 8px;">Add Event</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

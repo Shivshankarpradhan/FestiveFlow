@@ -16,6 +16,7 @@ router.post('/add', (req, res, next) => {
         next();
     } else {
         res.status(403).send("Unauthorized: Invalid Admin PIN");
+        res.send("/donations")
     }
 }, donationsController.addDonation);
 
