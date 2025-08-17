@@ -5,6 +5,6 @@ exports.addDonation = async(req ,res) => {
 }
 
 exports.getDonations = async(req ,res) =>{
-    const donations = await Donation.find();
+    const donations = await Donation.find().sort({amount: -1});
     res.render('donations' , {donations});
 };
