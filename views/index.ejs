@@ -26,20 +26,28 @@
         </button>
 
         <h2>GANESH CHATURTHI DASHBOARD</h2>
-        <p>Total Donation: <%= totalDonation %></p>
+        <p> Donation: <%= donationSum %></p>
+       <p>Village donations: <%= villageDonationSum  %></p>
+       <p>Total Donations:<%= totalDonation %></p>
         <p>Total Expenses: <%= totalExpenses %></p>
         <p>Remaing Budget:<%= totalDonation - totalExpenses%></p>
+         
 
         <div class="btn">
           <button>
             <a href="/donations" style="text-decoration: none; color: white">
-              View Donation</a
+              View Donations</a
             >
           </button>
 
           <button class="expenses">
             <a href="/expenses" style="text-decoration: none; color: #eda02f"
               >View Expenses</a
+            >
+
+             <button class="villagedonations">
+            <a href="/villagedonations" style="text-decoration: none; color: #ffffff"
+              >Village Donations</a
             >
           </button>
         </div>
